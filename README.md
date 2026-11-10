@@ -1,22 +1,21 @@
-# Detecting "Disable Windows Event Logging" (MITRE ATT&CK T1562.002)
+# Detection Engineering: Detecting a MITRE ATT&CK Technique
 
-A threat-hunting and detection project implementing **MITRE CAR-2022-03-001**, which addresses the defense-evasion technique **T1562.002 – Impair Defenses: Disable Windows Event Logging**.
+Emulating an attacker technique and building detection logic to catch it.
 
-## Objective
-Understand how attackers disable Windows event logging to evade detection, emulate the technique in a controlled lab, and build detection logic to catch it.
+## Overview
+I studied a defense-evasion technique from the MITRE ATT&CK framework, emulated it on a Windows virtual machine, and built detection logic to identify the behavior - practicing the full "understand the attack, then detect it" workflow that detection engineering relies on.
 
-## Environment & Tools
-- Windows VM (isolated lab)
-- Sysmon (System Monitor) for enhanced logging
-- MITRE ATT&CK framework & CAR analytics
-- Windows Event Viewer / log analysis
+## What I did
+- Researched the technique (disabling Windows event logging - ATT&CK T1562.002) and how attackers use it to evade defenders
+- Emulated the activity on an isolated **Windows VM**
+- Configured **Sysmon** and built detection logic to surface the defense-evasion behavior
+- Analyzed the results and documented how the detection works and why it matters
 
-## What I Did
-1. **Analysis** — Researched and documented the main methods attackers use to disable or tamper with Windows Event Logging, mapping each to the ATT&CK technique.
-2. **Emulation** — Safely emulated the logging-evasion activity on an isolated Windows VM.
-3. **Detection** — Configured Sysmon and monitored for the indicators of the technique, developing detection logic to flag the defense-evasion behavior.
-4. **Documentation** — Recorded the attacker methods, detection approach, and results.
+## Tools & Technologies
+MITRE ATT&CK, Sysmon, Windows, VMware
 
+## Skills demonstrated
+Threat emulation, detection engineering, Windows telemetry and event logging, MITRE ATT&CK mapping, analysis and documentation
 
----
-*Educational lab project completed as part of Seneca Polytechnic's Cybersecurity & Threat Management program. No malware samples or sensitive data included.*
+## Note
+Summary of a controlled lab exercise for learning purposes. No malware or live exploit code is included.
